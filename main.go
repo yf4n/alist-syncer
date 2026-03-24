@@ -29,8 +29,8 @@ func init() {
 	flag.StringVar(&endpoint, "endpoint", endpoint, "Alist服务地址")
 	flag.StringVar(&username, "username", username, "Alist用户名")
 	flag.StringVar(&password, "password", password, "Alist密码")
-	flag.StringVar(&srcDir, "src-dir", srcDir, "本地数据目录")
-	flag.StringVar(&dstDir, "dst-dir", dstDir, "远程数据目录")
+	flag.StringVar(&srcDir, "src_dir", srcDir, "本地数据目录")
+	flag.StringVar(&dstDir, "dst_dir", dstDir, "远程数据目录")
 }
 
 func main() {
@@ -137,7 +137,7 @@ func uploadLocalFiles(alistClient *AlistClient, remoteFilesMap, localFilesMap ma
 		}
 	}
 
-	log.Printf("============ Successfully uploaded %d files ============= ", len(needUploadFiles))
+	log.Printf("============ Successfully uploaded %d dirs ============= ", len(needUploadFiles))
 }
 
 func deleteRemoteFiles(alistClient *AlistClient, remoteFilesMap, localFilesMap map[string]*FSListContentItem) {
